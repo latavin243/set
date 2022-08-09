@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/fatih/set"
+	"github.com/latavin243/set"
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
 	var wg sync.WaitGroup
 
 	log.Print("Initialize our thread safe Set")
-	s := set.New(set.ThreadSafe)
+	s := set.New[string](set.ThreadSafe)
 
 	log.Print("Add items concurrently (item1, item2, and so on)")
 	for i := 0; i < 10; i++ {

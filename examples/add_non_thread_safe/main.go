@@ -4,12 +4,12 @@ import (
 	"log"
 	"strconv"
 
-	"github.com/fatih/set"
+	"github.com/latavin243/set"
 )
 
 func main() {
 	log.Print("Initialize our non thread safe Set")
-	s := set.New(set.NonThreadSafe)
+	s := set.New[string](set.NonThreadSafe)
 
 	log.Print("Add items serially (item1, item2, and so on)")
 	for i := 0; i < 10; i++ {
